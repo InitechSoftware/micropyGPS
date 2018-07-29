@@ -241,10 +241,13 @@ class MicropyGPS(object):
                 return False
 
             # Course
-            try:
-                course = float(self.gps_segments[8])
-            except ValueError:
-                return False
+            if self.gps_segments[8]:
+                try:
+                    course = float(self.gps_segments[8])
+                except ValueError:
+                    return False
+            else:
+                course = None
 
             # TODO - Add Magnetic Variation
 
