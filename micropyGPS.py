@@ -813,14 +813,12 @@ class MicropyGPS(object):
         return date_string
 
     # All the currently supported NMEA sentences
-    supported_sentences = {'GPRMC': gprmc, 'GLRMC': gprmc,
-                           'GPGGA': gpgga, 'GLGGA': gpgga,
-                           'GPVTG': gpvtg, 'GLVTG': gpvtg,
-                           'GPGSA': gpgsa, 'GLGSA': gpgsa,
+    supported_sentences = {'GPRMC': gprmc, 'GLRMC': gprmc, 'GNRMC': gprmc,
+                           'GPGGA': gpgga, 'GLGGA': gpgga, 'GNGGA': gpgga,
+                           'GPVTG': gpvtg, 'GLVTG': gpvtg, 'GNVTG': gpvtg,
+                           'GPGSA': gpgsa, 'GLGSA': gpgsa, 'GNGSA': gpgsa,
                            'GPGSV': gpgsv, 'GLGSV': gpgsv,
-                           'GPGLL': gpgll, 'GLGLL': gpgll,
-                           'GNGGA': gpgga, 'GNRMC': gprmc,
-                           'GNVTG': gpvtg,
+                           'GPGLL': gpgll, 'GLGLL': gpgll, 'GNGLL': gpgll,
                           }
 
 if __name__ == "__main__":
